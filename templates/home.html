@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='homeStyle.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    
+    <header id="header">
+        
+        <div class="bg-text">Welcome to the Forest-Fire-Prediction application</div>
+
+    </header>
+
+    <div id="navbar">
+        <ul id="navList">
+            <li>
+                <ul>
+                    <li ><i class="fa-solid fa-house"><a class="active" href="/">Home</a></i></li>
+                    <li><i class="fa-solid fa-tree"><a href="/forest_fire">predict</a></i></li>
+                    <li><i class="fa-brands fa-affiliatetheme"><a href="/about">about</a></i></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><i class="fa-solid fa-right-to-bracket"><a href="login">Login</a></i></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--BOdy of the page-->
+
+    
+    <div class="MainContent">
+
+        <div class="card">
+            <h1>Introduction</h1>
+            <p>
+                Forest-fire-prediction is a web based application developed using python.It allows the user the predict the occurance of the fire in a forest on the basis of various vegetation indices like NDVI, LST, Area.
+                The user needs to be registered in order to predict the occurance of the fire i.e. only authorized users can predict the occurance of fire. 
+            </p>
+
+            <h3>How it works..?</h3>
+            <p>Machine learning is learning from data to be able to predict 
+                the future.Hence, we are going to model some parameters 
+                crucial for any forest fire to take place and predict the 
+                possibility of a forest fire taking place based on that.                 
+
+                This project uses the vegetation indices like NDVI(Normalized Difference Vegetation Index), LST(Land Surface Temperature) and Area as the features and fourth column as label which contains the value 0 or 1(not_fire or fire).
+                This model is trained using the Logistic regression technique in machine learning in order the predict the occurance of fire.
+
+            </p>
+
+            <h3>Learning Algorithm</h3>
+            <p>This particular problem comes under the category of 
+                Supervised Learning. We train our machine learning mode
+                using the following 3 learning models and compare the 
+                accuracies: 
+                <ol type="1">
+                <li>Linear Regression </li>
+                <li>Logistic Regression </li>
+                <li>Support Vector Machine</li>
+                </ol>
+            </p>
+        </div>
+
+
+    </div>
+    
+    <div class="getStarted">
+        <p>In order the get started you will need to login first and become a member of the forest fire prevention team.</p>
+
+        <p><a href="/login">Get Started</a></p>
+    </div>
+
+    <div class="footer"></div>
+
+    
+
+</body>
+</html>
