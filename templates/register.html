@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loginStyle.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register User</title>
+</head>
+<body>
+    <div class="homeLogo"><a href="/"><i class="fa-solid fa-house">Home</i></a></div>
+    <div class="card">
+    <form action="{{ url_for('register') }}" method="post">
+
+        <label><strong>Enter Full Name:</strong></label> <input type="text" placeholder="enter full name" name="fullname"><br>
+        <label><strong>Enter Email ID :</strong></label> <input type="email" placeholder="enter email" name="email" ><br>
+        <label><strong>Enter User name:</strong></label> <input type="text" placeholder="enter username" name="username"><br>
+        <label><strong>Enter Password :</strong></label> <input type="password" placeholder="enter password" name="password"><br>
+        <label><strong>ConfirmPassword:</strong></label> <input type="password" placeholder="re-enter password" name="cpass"><br>
+
+        <button type="submit" > Register </button>
+
+        <div class="message">{{ msg }}</div>
+
+    </form>
+    </div>
+</body>
+</html>
